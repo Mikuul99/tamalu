@@ -1,0 +1,718 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Corbel';
+}
+
+/* header sekcija */
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    background-color: #efefee;
+}
+
+.header__nav {
+    display: flex;
+    gap: 10rem;
+}
+
+.header__link {
+    font-size: 2rem;
+    text-decoration: none;
+    padding: .5rem 2rem;
+    color: black;
+    border-radius: 1rem;
+    transition: all .5s ease;
+}
+
+.header__link:visited, .header__link:active {
+    color: black;
+}
+
+.header__link:hover {
+    background-color: #716f69;
+    color: white;
+    border-radius: 1rem;
+}
+
+.header__logo-img {
+    width: 30rem;
+
+}
+
+@media screen and (max-width: 1280px) {
+    .header__link {
+        font-size: 1.5rem;
+    }
+
+    .header__nav {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+    }
+
+    .header__logo-img {
+        width: 20rem;
+    }
+
+    .header__nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .header__link {
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .header__link:hover {
+        border-radius: 0;
+    }
+}
+
+
+/* banner sekcija */
+
+.banner {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@keyframes slider {
+    0% {transform: translateX(0);}
+    10% {transform: translateX(0);}
+    45% {transform: translateX(-100vw);}
+    55% {transform: translateX(-100vw);}
+    90% {transform: translateX(-200vw);}
+    100% {transform: translateX(-200vw);}
+}
+
+.banner__slider {
+    width: 300vw;
+    display: flex;
+    height: 57rem;
+    animation: slider 20s ease infinite alternate;
+}
+
+.banner__slide {
+    width: 100vw;
+}
+
+.banner__slide1 {
+    background: url(slike_biljke/baner\ 333.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner__slide2 {
+    background: url(slike_biljke/baner\ 444.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner__slide3 {
+    background: url(slike_biljke/baner\ 555.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .banner__slider {
+        height: 41.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner__slider {
+        height: 24.5rem;
+    }
+}
+
+/* o nama sekcija */
+
+.about-us {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #efefee;
+}
+
+.about-us__txt {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-us__heading {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.about-us__paragraph {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.about-us__image-container {
+    height: 50rem;
+    overflow: hidden;
+}
+
+.about-us__img {
+    max-width: 50rem;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1280px) {
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-us__image-container {
+        height: 35rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .about-us__img {
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about-us__txt {
+        width: 100%;
+        padding: 2rem;
+        border: .3rem solid black;
+    }
+
+    .about-us__heading {
+        font-size: 3rem;
+    }
+    
+    .about-us__paragraph {
+        font-size: 1.2rem;
+        line-height: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-us__image-container {
+        height: 20rem;
+    }
+}
+
+/* proizvodi sekcija */
+
+.products {
+    width: 100%;
+    height: 30rem;
+    margin: 0 auto;
+    background-color: #efefee;
+    text-align: center;
+    position: relative;
+    /* overflow: hidden; */
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.products__span {
+    display: block;
+    margin: 0 auto;
+    width: 10rem;
+    height: 1rem;
+    background-color: #716f69;
+    border-radius: 1rem;
+}
+
+.products__heading {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.products__slider-container {
+    width: 61rem;
+    height: 20rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.products__slider {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    position: absolute;
+    bottom: 0;
+    transition: all .5s ease;
+}
+
+.products__slide {
+    width: 20rem;
+    height: 20rem;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.products__slide:hover {
+    transform: scale(1.1);
+}
+
+.products__btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 3rem;
+    position: absolute;
+    cursor: pointer;
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    text-align: center;
+    top: 50%;
+}
+
+.products__btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.products__btn-left {
+    left: 5rem;
+    z-index: 99;
+}
+
+.products__btn-right {
+    right: 5rem;
+}
+
+.products__slide:nth-child(1) {
+    background: url(slike_biljke/Aglaonema\ Jungle\ Red.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(2) {
+    background: url(slike_biljke/Aglaonema\ Kiwi.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(3) {
+    background: url(slike_biljke/Aglaonema\ Orange\ Star.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(4) {
+    background: url(slike_biljke/Aloe\ vera.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(5) {
+    background: url(slike_biljke/baby\ plants.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(6) {
+    background: url(slike_biljke/baby\ plants\ 2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(7) {
+    background: url(slike_biljke/baby\ plants\ 3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(8) {
+    background: url(slike_biljke/Baby\ plants\ succulents.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(9) {
+    background: url(slike_biljke/Bonsai\ Fabian.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(10) {
+    background: url(slike_biljke/calathea\ rufibarba.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(11) {
+    background: url(slike_biljke/chlorophytum\ comosum.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(12) {
+    background: url(slike_biljke/cordyline\ fruticosa.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(13) {
+    background: url(slike_biljke/Efeutute\ Marble\ Queen.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(14) {
+    background: url(slike_biljke/feey-39qWKQaA8xM-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(15) {
+    background: url(slike_biljke/feey-46J-AiUN8cc-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(16) {
+    background: url(slike_biljke/feey-ebxj2hUU-bk-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(17) {
+    background: url(slike_biljke/feey-FE5EufzaeaA-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(18) {
+    background: url(slike_biljke/feey-hAO2YUcwDCU-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(19) {
+    background: url(slike_biljke/feey-O0N9MF--hK4-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(20) {
+    background: url(slike_biljke/feey-puDuLlsah3c-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(21) {
+    background: url(slike_biljke/feey-qvOOIhlFfE4-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(22) {
+    background: url(slike_biljke/feey-vafn1UD3iL4-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(23) {
+    background: url(slike_biljke/hoya\ kerii.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(24) {
+    background: url(slike_biljke/hoya\ plant.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(25) {
+    background: url(slike_biljke/Hoya\ Silver\ Flake.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(26) {
+    background: url(slike_biljke/jewel\ orchid\ plant.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(27) {
+    background: url(slike_biljke/maranta.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(28) {
+    background: url(slike_biljke/musa\ plant.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(29) {
+    background: url(slike_biljke/Philodendron\ Prince\ of\ Orange.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(30) {
+    background: url(slike_biljke/sansevieria.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(31) {
+    background: url(slike_biljke/scindapsus\ plant.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(32) {
+    background: url(slike_biljke/string\ of\ hearts.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(33) {
+    background: url(slike_biljke/Three\ hoya\ kerrii.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(34) {
+    background: url(slike_biljke/Three\ syngonium\ baby\ plants.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(35) {
+    background: url(slike_biljke/yucca\ plant.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.products__slide:nth-child(36) {
+    background: url(slike_biljke/zamia.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1280px) {
+    .products__heading {
+        font-size: 3rem;
+    }
+
+    .products__slider-container {
+        width: 20rem;
+    }
+
+    .products__btn-left {
+        left: 1rem;
+    }
+
+    .products__btn-right {
+        right: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .products__btn {
+        top: 2.2rem;
+    }
+}
+
+/* isporuka sekcija */
+
+.delivery {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    gap: 2rem;
+}
+
+.delivery__txt {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.delivery__img {
+    max-width: 20rem;
+    object-fit: cover;
+}
+
+.delivery__heading {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.delivery__paragraph {
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1280px) {
+    .delivery__heading {
+        font-size: 3rem;
+    }
+
+    .delivery__img {
+        max-width: 15rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .delivery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .delivery__img {
+        max-width: 100%;
+    }
+}
+
+/* kontakt sekcija */ 
+
+.contact {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #5e7541;
+    padding: 4rem 2rem;
+}
+
+.contact__heading { 
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.contact__form {
+    background-color: #efefee;
+    width: 70rem;
+    margin: 0 auto;
+    padding: 5rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact__form .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact__form .row input {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: .1rem solid black;
+    font-size: 1.5rem;
+}
+
+.contact__form input[type="submit"] {
+    width: 40%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    border: none;
+    transition: all .5s ease;
+}
+
+.contact__form input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+    border: none;
+    width: 50%;
+}
+
+.contact__txt {
+    font-size: 1.5rem;
+    color: white;
+}
+
+@media screen and (max-width: 1280px) {
+    .contact__heading {
+        font-size: 3rem;
+    }
+
+    .contact__form {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact__form {
+        width: 100%;
+        padding: 3rem 1.5rem;
+    }
+
+    .contact__form input[type="submit"] {
+        width: 80%;
+    }
+
+    .contact__form input[type="submit"]:hover {
+        width: 60%;
+    }
+}
+
+/* footer sekcija */
+
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #efefee;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer .footer__txt {
+    font-size: 1.2rem;
+}
